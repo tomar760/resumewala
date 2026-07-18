@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Resume Editor — ResumeWala</title>
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%231B3A6B'/><text x='16' y='23' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='900' font-size='18'>R</text></svg>" />
+  <title>Resume Editor — BanaoCV</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%231B3A6B'/><text x='16' y='23' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='900' font-size='18'>B</text></svg>" />
   <link rel="stylesheet" href="assets/css/style.css" />
   <link rel="stylesheet" href="assets/css/animations.css" />
   <style>
@@ -1715,7 +1715,7 @@
             <div id="share-link-wrap" style="display:none">
               <div style="display:flex;gap:6px;align-items:center;background:var(--bg);border:1.5px solid var(--border);border-radius:var(--r);padding:8px 10px;margin-bottom:8px">
                 <span style="font-size:0.75rem;color:var(--brand);flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" id="share-link-text">
-                  resumewala.in/r/abc123
+                  banaocv.in/r/abc123
                 </span>
                 <button class="btn btn-primary btn-sm" style="flex-shrink:0" onclick="copyShareLink()">
                   Copy
@@ -2300,7 +2300,7 @@
   /* ── Share Link ── */
   function generateShareLink() {
     const code = Math.random().toString(36).substr(2,8);
-    state.shareLink = `https://resumewala.in/r/${code}`;
+    state.shareLink = `https://banaocv.in/r/${code}`;
     document.getElementById('share-link-text').textContent = state.shareLink;
     document.getElementById('share-link-wrap').style.display = 'block';
 
@@ -2311,24 +2311,24 @@
   }
 
   function copyShareLink() {
-    window.RW?.Clipboard?.copy(state.shareLink || 'resumewala.in', 'Link copy ho gaya!');
+    window.RW?.Clipboard?.copy(state.shareLink || 'banaocv.in', 'Link copy ho gaya!');
   }
 
   function shareWhatsApp() {
-    const link = state.shareLink || 'https://resumewala.in';
+    const link = state.shareLink || 'https://banaocv.in';
     const msg  = encodeURIComponent(
-      `Mera professional resume dekho: ${link}\n\nResumeWala se banaya - India ka best free AI Resume Builder! 🚀`
+      `Mera professional resume dekho: ${link}\n\nBanaoCV se banaya - India ka best free AI Resume Builder! 🚀`
     );
     window.open(`https://wa.me/?text=${msg}`, '_blank');
   }
 
   function shareEmail() {
-    const link = state.shareLink || 'https://resumewala.in';
+    const link = state.shareLink || 'https://banaocv.in';
     window.location.href = `mailto:?subject=Mera Resume Dekho&body=Mera resume: ${link}`;
   }
 
   function shareLinkedIn() {
-    const link = state.shareLink || 'https://resumewala.in';
+    const link = state.shareLink || 'https://banaocv.in';
     window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(link)}`, '_blank');
   }
 
@@ -2434,7 +2434,7 @@
   /* ── URL param — load template ── */
   function loadTemplateFromURL() {
     const params = new URLSearchParams(window.location.search);
-    const t = params.get('t');
+    const t = params.get('t') || params.get('template');
     if (!t) return;
     const colorMap = {
       'dark-pro':       '#0f172a',

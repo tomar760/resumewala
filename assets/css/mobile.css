@@ -1,0 +1,9 @@
+/* BanaoCV responsive refinements shared by every page */
+@media (max-width: 720px) {
+  .container { width: min(100% - 32px, 1180px); }
+  .section { padding: 56px 0; }
+  .hero-title { font-size: clamp(2.3rem, 10vw, 3.4rem); }
+  .hero-cta .btn { width: 100%; justify-content: center; }
+  .hero-stats { gap: 14px; }
+  .modal { width: calc(100% - 28px); padding: 24px 20px; }
+}
