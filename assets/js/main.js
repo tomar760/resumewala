@@ -1,5 +1,5 @@
 /* ============================================================
-   ResumeWala — main.js
+   BanaoCV — main.js
    Common JS — runs on every page
    Navbar, scroll reveal, FAQ, toast, modals, counters
    ============================================================ */
@@ -514,9 +514,9 @@ const AuthState = (() => {
         navCTA.href        = 'dashboard.html';
         navCTA.textContent = 'Dashboard';
       } else {
-        navCTA.href        = '#';
+        navCTA.href        = 'editor.html';
         navCTA.textContent = 'Free Mein Shuru Karo';
-        navCTA.setAttribute('data-modal-open', 'auth-modal');
+        navCTA.removeAttribute('data-modal-open');
       }
     }
   }
@@ -604,6 +604,23 @@ window.addEventListener('unhandledrejection', (e) => {
 });
 
 /* ══════════════════════════════════════════════════════════
+   18. DEMO AUTH — shared local browser session
+══════════════════════════════════════════════════════════ */
+const Auth = (() => {
+  function complete(name, email) {
+    if (!email) return Toast.warning('Email daalna zaroori hai.');
+    localStorage.setItem('rw_user', JSON.stringify({ name: name || email.split('@')[0], email }));
+    AuthState.updateUI();
+    Toast.success('Welcome to BanaoCV!');
+    setTimeout(() => { window.location.href = 'dashboard.html'; }, 500);
+  }
+  function emailLogin() { complete(document.getElementById('login-email')?.value, document.getElementById('login-email')?.value); }
+  function emailSignup() { complete(document.getElementById('signup-name')?.value, document.getElementById('signup-email')?.value); }
+  function googleLogin() { complete('BanaoCV User', 'user@banaocv.in'); }
+  return { emailLogin, emailSignup, googleLogin };
+})();
+
+/* ══════════════════════════════════════════════════════════
    18. EXPOSE GLOBALS
 ══════════════════════════════════════════════════════════ */
 window.RW = {
@@ -611,6 +628,7 @@ window.RW = {
   Modal,
   AuthState,
   Clipboard,
+  Auth,
 };
 
 /* ══════════════════════════════════════════════════════════

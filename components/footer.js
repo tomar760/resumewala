@@ -1,5 +1,5 @@
 /* ============================================================
-   ResumeWala — components/footer.js
+   BanaoCV — components/footer.js
    Auto-inject footer on every page
    Usage: <script src="../components/footer.js"></script>
           or <script src="components/footer.js"></script>
@@ -17,8 +17,8 @@
       <!-- Brand col -->
       <div>
         <div class="footer-brand-logo">
-          <div class="footer-brand-icon">R</div>
-          <span class="footer-brand-name">Resume<span>Wala</span></span>
+          <div class="footer-brand-icon">B</div>
+          <span class="footer-brand-name">Banao<span>CV</span></span>
         </div>
         <p class="footer-tagline">
           India ka apna AI Resume Builder — Hindi mein bolo,
@@ -55,9 +55,9 @@
           <a href="templates.html" class="footer-link">Templates</a>
           <a href="editor.html"    class="footer-link">Resume Editor</a>
           <a href="pricing.html"   class="footer-link">Pricing</a>
-          <a href="#"              class="footer-link">AI Resume Builder</a>
-          <a href="#"              class="footer-link">ATS Score Checker</a>
-          <a href="#"              class="footer-link">Cover Letter</a>
+          <a href="editor.html"       class="footer-link">AI Resume Builder</a>
+          <a href="editor.html#card-score" class="footer-link">ATS Score Checker</a>
+          <a href="dashboard.html"    class="footer-link">Cover Letter</a>
         </nav>
       </div>
 
@@ -65,12 +65,12 @@
       <div>
         <p class="footer-col-title">Resources</p>
         <nav class="footer-links">
-          <a href="#" class="footer-link">Resume Tips</a>
-          <a href="#" class="footer-link">Interview Guide</a>
-          <a href="#" class="footer-link">Salary Guide India</a>
-          <a href="#" class="footer-link">Job Search Tips</a>
-          <a href="#" class="footer-link">Blog</a>
-          <a href="#" class="footer-link">FAQ</a>
+          <a href="index.html#how-it-works" class="footer-link">Resume Tips</a>
+          <a href="index.html#reviews" class="footer-link">Interview Guide</a>
+          <a href="pricing.html" class="footer-link">Salary Guide India</a>
+          <a href="index.html#features" class="footer-link">Job Search Tips</a>
+          <a href="index.html#features" class="footer-link">Blog</a>
+          <a href="index.html#faq" class="footer-link">FAQ</a>
         </nav>
       </div>
 
@@ -78,17 +78,17 @@
       <div>
         <p class="footer-col-title">Company</p>
         <nav class="footer-links">
-          <a href="#" class="footer-link">About Us</a>
-          <a href="#" class="footer-link">Contact</a>
-          <a href="#" class="footer-link">Careers</a>
-          <a href="#" class="footer-link">Press</a>
-          <a href="#" class="footer-link">Affiliates</a>
+          <a href="index.html#hero" class="footer-link">About Us</a>
+          <a href="mailto:support@banaocv.in" class="footer-link">Contact</a>
+          <a href="mailto:support@banaocv.in?subject=Careers" class="footer-link">Careers</a>
+          <a href="mailto:support@banaocv.in?subject=Press" class="footer-link">Press</a>
+          <a href="mailto:support@banaocv.in?subject=Affiliates" class="footer-link">Affiliates</a>
         </nav>
 
         <p class="footer-col-title" style="margin-top:24px">Support</p>
         <nav class="footer-links">
-          <a href="mailto:support@resumewala.in" class="footer-link">support@resumewala.in</a>
-          <a href="#" class="footer-link">Help Center</a>
+          <a href="mailto:support@banaocv.in" class="footer-link">support@banaocv.in</a>
+          <a href="index.html#faq" class="footer-link">Help Center</a>
         </nav>
       </div>
 
@@ -97,12 +97,12 @@
     <!-- Bottom bar -->
     <div class="footer-bottom">
       <p class="footer-copy">
-        © ${year} ResumeWala. Sab rights reserved. Made with ❤️ in India 🇮🇳
+        © ${year} BanaoCV. Sab rights reserved. Made with ❤️ in India 🇮🇳
       </p>
       <div class="footer-bottom-links">
-        <a href="#" class="footer-bottom-link">Privacy Policy</a>
-        <a href="#" class="footer-bottom-link">Terms of Service</a>
-        <a href="#" class="footer-bottom-link">Refund Policy</a>
+        <a href="index.html#faq" class="footer-bottom-link">Privacy Policy</a>
+        <a href="index.html#faq" class="footer-bottom-link">Terms of Service</a>
+        <a href="pricing.html#faq" class="footer-bottom-link">Refund Policy</a>
       </div>
     </div>
 
