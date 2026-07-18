@@ -47,6 +47,9 @@
         </a>
         <button class="btn btn-ghost btn-sm" data-auth="logged-in"
                 data-logout style="display:none">Logout</button>
+        <button class="dark-mode-toggle" onclick="window.toggleDarkMode()" aria-label="Toggle Dark Mode" title="Dark Mode">
+          🌙
+        </button>
       </div>
 
       <!-- Hamburger -->

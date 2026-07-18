@@ -621,6 +621,31 @@ const Auth = (() => {
 })();
 
 /* ══════════════════════════════════════════════════════════
+   DARK MODE — one-click toggle with localStorage
+══════════════════════════════════════════════════════════ */
+function initDarkMode() {
+  const saved = localStorage.getItem('banaocv_dark_mode');
+  const isDark = saved === 'true';
+  const html = document.documentElement;
+
+  function applyDark(dark) {
+    html.classList.toggle('dark-mode', dark);
+    localStorage.setItem('banaocv_dark_mode', dark ? 'true' : 'false');
+    // Update toggle icon
+    const btn = document.querySelector('.dark-mode-toggle');
+    if (btn) btn.innerHTML = dark ? '☀️' : '🌙';
+  }
+
+  if (isDark) applyDark(true);
+
+  window.toggleDarkMode = function () {
+    const currentlyDark = html.classList.contains('dark-mode');
+    applyDark(!currentlyDark);
+    Toast.info(currentlyDark ? 'Light mode on!' : 'Dark mode on!');
+  };
+}
+
+/* ══════════════════════════════════════════════════════════
    18. EXPOSE GLOBALS
 ══════════════════════════════════════════════════════════ */
 window.RW = {
@@ -635,6 +660,7 @@ window.RW = {
    19. INIT ALL ON DOM READY
 ══════════════════════════════════════════════════════════ */
 document.addEventListener('DOMContentLoaded', () => {
+  initDarkMode();
   Navbar.init();
   ScrollReveal.init();
   Modal.init();
