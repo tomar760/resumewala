@@ -1,0 +1,203 @@
+/* ============================================================
+   BanaoCV — Unique Animated Backgrounds Per Page
+   Each page gets its own living, breathing canvas-like background
+   ============================================================ */
+
+/* Shared base for all animated page backgrounds */
+.page-bg-animated {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+/* ══════════════════════════════════════════════════════════
+   HOME — Deep Ocean / Brand Wave
+══════════════════════════════════════════════════════════ */
+.bg-home .hero,
+.bg-home .section,
+.bg-home .marquee-section,
+.bg-home .cta-banner {
+  position: relative;
+  z-index: 2;
+}
+
+.bg-home .page-bg-animated {
+  background:
+    radial-gradient(at 20% 10%, rgba(27,58,107,0.15) 0%, transparent 50%),
+    radial-gradient(at 80% 90%, rgba(245,166,35,0.12) 0%, transparent 50%),
+    linear-gradient(135deg, #0f2347 0%, #1B3A6B 40%, #2a5298 100%);
+  animation: bgShift 20s ease-in-out infinite alternate;
+}
+
+.bg-home .hero-blob-1 {
+  position: absolute;
+  width: 500px; height: 500px;
+  top: -120px; right: -80px;
+  background: radial-gradient(circle, rgba(245,166,35,0.25) 0%, transparent 70%);
+  border-radius: 50%;
+  filter: blur(60px);
+  animation: floatSlow 14s ease-in-out infinite;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.bg-home .hero-blob-2 {
+  position: absolute;
+  width: 400px; height: 400px;
+  bottom: 40px; left: -60px;
+  background: radial-gradient(circle, rgba(27,58,107,0.5) 0%, transparent 70%);
+  border-radius: 50%;
+  filter: blur(80px);
+  animation: floatAlt 16s ease-in-out infinite;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* ══════════════════════════════════════════════════════════
+   TEMPLATES — Creative Geometric / Gold Mesh
+══════════════════════════════════════════════════════════ */
+.bg-templates .templates-page-hero,
+.bg-templates .templates-layout,
+.bg-templates .pricing-section {
+  position: relative;
+  z-index: 2;
+}
+
+.bg-templates .page-bg-animated {
+  background:
+    linear-gradient(135deg, #1a0f2e 0%, #2d1b4e 30%, #1B3A6B 70%, #0f2347 100%),
+    repeating-linear-gradient(45deg, rgba(245,166,35,0.06) 0px, rgba(245,166,35,0.06) 1px, transparent 1px, transparent 20px),
+    repeating-linear-gradient(-45deg, rgba(245,166,35,0.05) 0px, rgba(245,166,35,0.05) 1px, transparent 1px, transparent 20px);
+  animation: meshMove 30s linear infinite;
+}
+
+.bg-templates .template-animated-orb {
+  position: absolute;
+  width: 300px; height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, rgba(245,166,35,0.15), rgba(245,166,35,0.02));
+  filter: blur(40px);
+  animation: floatSlow 10s ease-in-out infinite alternate;
+}
+
+/* ══════════════════════════════════════════════════════════
+   EDITOR — Tech Grid / Dark Matrix
+══════════════════════════════════════════════════════════ */
+.bg-editor .editor-shell {
+  position: relative;
+  z-index: 2;
+}
+
+.bg-editor .page-bg-animated {
+  background:
+    linear-gradient(180deg, #0d1117 0%, #111827 50%, #0f2347 100%),
+    linear-gradient(90deg, rgba(58,164,255,0.03) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(58,164,255,0.03) 1px, transparent 1px);
+  background-size: 100% 100%, 40px 40px, 40px 40px;
+  animation: gridDrift 40s linear infinite;
+}
+
+.bg-editor .editor-glow {
+  position: absolute;
+  width: 600px; height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(58,164,255,0.08) 0%, transparent 70%);
+  filter: blur(80px);
+  animation: floatAlt 20s ease-in-out infinite;
+  top: 20%; left: 10%;
+  pointer-events: none;
+}
+
+/* ══════════════════════════════════════════════════════════
+   PRICING — Gold Gradient / Premium Aura
+══════════════════════════════════════════════════════════ */
+.bg-pricing .pricing-hero,
+.bg-pricing .pricing-section {
+  position: relative;
+  z-index: 2;
+}
+
+.bg-pricing .page-bg-animated {
+  background:
+    linear-gradient(135deg, #0f2347 0%, #2a5298 25%, #c8841a 60%, #1B3A6B 100%);
+  background-size: 300% 300%;
+  animation: gradientShift 15s ease infinite;
+}
+
+.bg-pricing .pricing-sparkle {
+  position: absolute;
+  width: 120px; height: 120px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(245,166,35,0.3), transparent 70%);
+  filter: blur(30px);
+  animation: float 6s ease-in-out infinite alternate;
+}
+
+/* ══════════════════════════════════════════════════════════
+   LOGIN — Soft Warm / Focused Light
+══════════════════════════════════════════════════════════ */
+.bg-login .auth-page {
+  position: relative;
+  z-index: 2;
+}
+
+.bg-login .page-bg-animated {
+  background:
+    radial-gradient(at 70% 30%, rgba(245,166,35,0.15) 0%, transparent 60%),
+    radial-gradient(at 30% 80%, rgba(27,58,107,0.2) 0%, transparent 60%),
+    linear-gradient(160deg, #fff8ec 0%, #f8fafc 60%, #edf4ff 100%);
+  animation: softBreath 12s ease-in-out infinite alternate;
+}
+
+/* ══════════════════════════════════════════════════════════
+   DASHBOARD — Clean Professional / Subtle Depth
+══════════════════════════════════════════════════════════ */
+.bg-dashboard .dash-shell,
+.bg-dashboard .dash-main {
+  position: relative;
+  z-index: 2;
+}
+
+.bg-dashboard .page-bg-animated {
+  background:
+    linear-gradient(180deg, #f0f4ff 0%, #f8fafc 40%, #e8eef8 70%, #f1f5f9 100%),
+    radial-gradient(at 50% 0%, rgba(27,58,107,0.06) 0%, transparent 70%);
+  animation: slowPan 25s ease-in-out infinite alternate;
+}
+
+/* ══════════════════════════════════════════════════════════
+   KEYFRAME ANIMATIONS FOR BACKGROUNDS
+══════════════════════════════════════════════════════════ */
+@keyframes bgShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes meshMove {
+  0% { background-position: 0% 0%, 0% 0%; }
+  100% { background-position: 100% 100%, -100% -100%; }
+}
+
+@keyframes gridDrift {
+  0% { background-position: 0% 0%, 0% 0%; }
+  100% { background-position: 40px 40px, 40px 40px; }
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes softBreath {
+  0% { filter: brightness(1); }
+  100% { filter: brightness(1.05); }
+}
+
+@keyframes slowPan {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 0% 20%; }
+}
